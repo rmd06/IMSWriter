@@ -19,15 +19,15 @@ if isequal(sum(cellfun(@(x) ~isempty(strfind(x,'ImarisWriter.jar')),javaclasspat
     
     java.lang.System.load('D:\QMDownload\3\IMSWriter-master\lib\jhdf5.dll');
     java.lang.System.load('D:\QMDownload\3\IMSWriter-master\lib\jhdf.dll');
-    java.lang.System.load('D:\QMDownload\3\IMSWriter-master\lib\win\jhdf5.dll');
-    java.lang.System.load('D:\QMDownload\3\IMSWriter-master\lib\win\jhdf.dll');
+    %java.lang.System.load('D:\QMDownload\3\IMSWriter-master\lib\win\jhdf5.dll');
+    %java.lang.System.load('D:\QMDownload\3\IMSWriter-master\lib\win\jhdf.dll');
     
-    javaaddpath D:\QMDownload\3\IMSWriter-master\lib\jhdf.jar
-    javaaddpath D:\QMDownload\3\IMSWriter-master\lib\jhdf4obj.jar
-    javaaddpath D:\QMDownload\3\IMSWriter-master\lib\jhdfview.jar
-    javaaddpath D:\QMDownload\3\IMSWriter-master\lib\junit.jar
-    javaaddpath D:\QMDownload\3\IMSWriter-master\lib\netcdf.jar
-    javaaddpath D:\QMDownload\3\IMSWriter-master\lib\fits.jar
+   % javaaddpath D:\QMDownload\3\IMSWriter-master\lib\jhdf.jar
+   % javaaddpath D:\QMDownload\3\IMSWriter-master\lib\jhdf4obj.jar
+   % javaaddpath D:\QMDownload\3\IMSWriter-master\lib\jhdfview.jar
+   % javaaddpath D:\QMDownload\3\IMSWriter-master\lib\junit.jar
+   % javaaddpath D:\QMDownload\3\IMSWriter-master\lib\netcdf.jar
+   % javaaddpath D:\QMDownload\3\IMSWriter-master\lib\fits.jar
 end
 % java.lang.System.setProperty('ncsa.hdf.hdf5lib.H5','D:\QMDownload\3\IMSWriter-master\lib\win\jhdf5.dll'); 
 % T = javaObject('ncsa.hdf.hdf5lib.H5')
@@ -86,7 +86,7 @@ for time_index = 0 :  num_frames - 1
     end
 end
 disp('...writing ALL slices finished!')
-%% 关闭ImarisWriter对象
+%% 关闭ImarisWriter对象:总是报错?
  writer.close()
 
 %%
