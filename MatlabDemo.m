@@ -68,11 +68,11 @@ num_frames = 3;
 pixel_size_xy = 0.5;
 pixel_size_z = 1.0;
 
-%% 构建ImarisWriter对象
+%% 鏋勫缓ImarisWriter瀵硅薄
 writer = main.java.ImarisWriter(dir,name,int32(shape(1)),int32(shape(2)),int32(byte_depth),int32(shape(3)),int32(num_channels),int32(num_frames),double(pixel_size_xy),double(pixel_size_z));
 % methodsview(writer)
 
-%% 向ImarisWriter对象中不断添加图片层
+%% 鍚慖marisWriter瀵硅薄涓笉鏂坊鍔犲浘鐗囧眰
 for time_index = 0 :  num_frames - 1
     for channel_index = 0 :  num_channels - 1
         for z_index = 0 :  shape(3) - 1
@@ -86,7 +86,7 @@ for time_index = 0 :  num_frames - 1
     end
 end
 disp('...writing ALL slices finished!')
-%% 关闭ImarisWriter对象
+%% 鍏抽棴ImarisWriter瀵硅薄
  writer.close()
 
 %%
